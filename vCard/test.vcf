@@ -1,0 +1,19 @@
+BEGIN:VCARD 
+VERSION:3.0 
+N:Walchko;Kevin;;;
+FN:Kevin Walchko
+PHOTO;VALUE=URL;TYPE=PNG:http://upload.wikimedia.org/wikipedia/en/0/0f/FuturamaProfessorFarnsworth.png 
+EMAIL;type=INTERNET;type=HOME:kevin.walchko@gmail.com
+IMPP:aim:johndoe@aol.com
+URL:http:/github.com/walchko
+TITLE:
+ORG:
+TEL;type=WORK;type=VOICE:
+EMAIL;type=INTERNET;type=WORK:
+ADR;WORK:;;
+TEL;type=WORK;type=VOICE:
+ADR;HOME:;;
+PRODID:-//Kevin's Python Script//EN 
+KIND:individual 
+LANG:en-US 
+END:VCARD 
