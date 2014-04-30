@@ -3,13 +3,21 @@
 import  pywapi
 import string
 
+# to help see better:
+# for i in wr: print str(i) + ": " + str(wr[i]) + "\n\n"
+# for i in wr['forecasts']: print str(i) + "\n\n" 
+
 def printWeather(wr):
+	c = wr['current_conditions']
 	print "==== " + wr['location']['name'] + " [" + wr['location']['lat'] + ',' + wr['location']['lon'] + "]==============="
-	print "Current Temp: " + wr['current_conditions']['temperature'] + ' ' + wr['units']['temperature'] + ' ' + wr['current_conditions']['text']
-	#print "Min/Max: " + 
-	
+	print "Current Temp: " + c['temperature'] + ' ' + wr['units']['temperature'] + ' ' + c['text']
+	print "Feels like: " + c['feels_like'] + ' ' + wr['units']['temperature'] 
+	print 'Wind: ' + c['wind']['speed'] + ' ' + wr['units']['speed'] + ' ' + c['wind']['text'] 
+	print 'UV index: ' + c['uv']['index'] + ' [' + c['uv']['text'] + ']'
+	print c['moon_phase']['text'] + ' Moon'
+	print '-------------------------------------------------'
 	for i in wr['forecasts']:
-		print i['day_of_week'] + ': \t' + i['low'] + ' ' + i['high'] + ' ' + i['day']['chance_precip'] + '% ' + i['day']['text']
+		print i['day_of_week'] + ': \t' + i['low'] + ' ' + i['high'] + ' ' + i['day']['chance_precip'] + '% \t' + i['day']['text']
 	
 def main():
 	weather_com_result = pywapi.get_weather_from_weather_com('20105','')
