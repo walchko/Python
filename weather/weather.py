@@ -14,10 +14,13 @@ def printWeather(wr):
 	print "Feels like: " + c['feels_like'] + ' ' + wr['units']['temperature'] 
 	print 'Wind: ' + c['wind']['speed'] + ' ' + wr['units']['speed'] + ' ' + c['wind']['text'] 
 	print 'UV index: ' + c['uv']['index'] + ' [' + c['uv']['text'] + ']'
-	print c['moon_phase']['text'] + ' Moon'
-	print '-------------------------------------------------'
+	print c['moon_phase']['text'] + ' Moon \n'
+	print '---[Forcast]-------------------------------------'
 	for i in wr['forecasts']:
-		print i['day_of_week'] + ': \t' + i['low'] + ' ' + i['high'] + ' ' + i['day']['chance_precip'] + '% \t' + i['day']['text']
+		print i['day_of_week'] + ': ' + i['low'] + ' ' + wr['units']['temperature'] + ' to ' + i['high'] + ' ' + wr['units']['temperature']
+		print '     Day: ' + i['day']['chance_precip'] + '% ' + i['day']['text'] 
+		print '   Night: ' + i['night']['chance_precip'] + '% ' + i['night']['text']
+		print ' '
 	
 def main():
 	weather_com_result = pywapi.get_weather_from_weather_com('20105','')
