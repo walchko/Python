@@ -9,19 +9,20 @@ flvcreator='TTU ME Department'
 import urllib2, time, os, re, getopt, sys
 
 def usage():
-    print """axisgrab.py -- grab or encode images from an Axis IP camera
-Usage: axisgrab.py --grab
-       axisgrab.py --encode
-"""
+    print """ip_cam.py grabs images from an IP camera \nUsage: axisgrab.py [--grab | --encode]"""
 
 def main():
 
     try:
-        optlist, args = getopt.getopt(sys.argv[1:], 'g:e:',
-                                      [ 'grab', 'encode' ])
+        optlist, args = getopt.getopt(sys.argv[1:], 'g:e:',[ 'grab', 'encode' ])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
+    
+    if optlist == [] and args == []:
+        usage()
+        sys.exit(2)
+    	
 
     for opt, junk in optlist:
         if (opt=='--grab'):    
