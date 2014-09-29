@@ -1,0 +1,11 @@
+This variant of 3D tic tac toe was developed by me, Ian Mallett, and a friend of mine while we were supposed to be paying attention in Complex Analysis.
+
+The goal is to get four in a row in any direction (except vertically).  
+
+The four boards are projective, so pieces *project* through all four layers of the board.  Pieces project upwards and downwards, but only as far as they aren't "blocked" by the other player's pieces.
+
+The boards may also be modular (see settings.py).  If this is the case, then solutions may wrap around boards, including in projection.
+
+See the in-game tutorial for more clarification.
+
+Note that the game will not necessarily consider the "most obvious" solution first when evaluating the board for an end state, although the fewer projections the more favored the solution.

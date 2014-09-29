@@ -1,0 +1,95 @@
+
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<title>Simple Map</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<style>
+		  html, body, #map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		  }
+		</style>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script>
+	
+var pt0 = new google.maps.LatLng(37, -122);
+var pt1 = new google.maps.LatLng(37, -122);
+var pt2 = new google.maps.LatLng(37, -122);
+var pt3 = new google.maps.LatLng(37, -122);
+var pt4 = new google.maps.LatLng(37, -122);
+var pt5 = new google.maps.LatLng(37, -122);
+var pt6 = new google.maps.LatLng(37, -122);
+var pt7 = new google.maps.LatLng(37, -122);
+var pt8 = new google.maps.LatLng(37, -122);
+var pt9 = new google.maps.LatLng(37, -122);
+var pt10 = new google.maps.LatLng(37, -122);
+var pt11 = new google.maps.LatLng(37, -122);
+var pt12 = new google.maps.LatLng(37, -122);
+var pt13 = new google.maps.LatLng(37, -122);
+var pt14 = new google.maps.LatLng(37, -122);
+var pt15 = new google.maps.LatLng(37, -122);
+var pt16 = new google.maps.LatLng(37, -122);
+var pt17 = new google.maps.LatLng(37, -122);
+var pt18 = new google.maps.LatLng(37, -122);
+var pt19 = new google.maps.LatLng(37, -122);
+var pt20 = new google.maps.LatLng(37, -122);
+var pt21 = new google.maps.LatLng(37, -122);
+var pt22 = new google.maps.LatLng(37, -122);
+var locationArray = [pt0,pt1,pt2,pt3,pt4,pt5,pt6,pt7,pt8,pt9,pt10,pt11,pt12,pt13,pt14,pt15,pt16,pt17,pt18,pt19,pt20,pt21,pt22,];
+var locationNameArray = ['<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-yahoo fa-stack-1x fa-fw"></i></span><br>61987</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61824</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61820</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61800</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-yahoo fa-stack-1x fa-fw"></i></span><br>61828</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61820</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61824</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61821</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-yahoo fa-stack-1x fa-fw"></i></span><br>61827</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61825</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61808</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-yahoo fa-stack-1x fa-fw"></i></span><br>61827</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61800</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61808</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-yahoo fa-stack-1x fa-fw"></i></span><br>61828</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61821</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61822</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61825</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61822</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-yahoo fa-stack-1x fa-fw"></i></span><br>61987</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61823</center>', '<center><span class="fa-stack "><i class="fa fa-envelope-o fa-stack-2x fa-fw"></i><i class="fa fa-circle-thin fa-stack-1x fa-fw"></i></span><br>61823</center>', '<center><i class="fa fa-dropbox pull-left"><br>61795</center>'];
+
+    
+	var map;
+	
+	function initialize() {
+		var lat = 40, lon = -110;
+	
+		// Doesn't work for some reason
+		//if (navigator.geolocation) {
+		//	navigator.geolocation.getCurrentPosition(
+		//		function(position){
+		//			lat = position.coords.latitude;
+		//			lon = position.coords.longitude;
+		//		});
+ 		//};
+		
+		var mapOptions = {
+			zoom: 2,
+			center: new google.maps.LatLng(lat, lon),
+			scrollwheel: false
+		};
+
+
+		map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+		var coord;
+	  	for (coord in locationArray) {
+			new google.maps.InfoWindow({
+			  position: locationArray[coord],
+			  map: map,
+			  content: locationNameArray[coord]
+		});
+		
+		//for(coord in locationArray){
+		//	new google.maps.Marker({
+		//		position: locationArray[coord],
+		//		map: map,
+		//		title: locationNameArray[coord]
+		//});
+	}
+
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+		</script>
+	  </head>
+	  <body>
+		<div id="map-canvas"></div>
+	  </body>
+	</html>
+	
