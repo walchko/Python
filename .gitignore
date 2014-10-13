@@ -2,4 +2,5 @@
 *.jpg
 *.pyc
 old
+orig
 .DS_Store
