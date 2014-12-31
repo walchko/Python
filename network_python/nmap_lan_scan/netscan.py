@@ -236,7 +236,7 @@ class NetworkScan:
 		# -F faster scan mode, fewer ports searched 
 		# result is also pipped to grep where it pulls tcp or MAC lines
 		# result is pipped to sed to remove extra whitespace
-		cmd = ["nmap -sS -F -oN - %s  | grep 'tcp\|MAC' | sed 's/^ *//;s/ *$//;s/ \{1,\}/ /g' "%(ip)]
+		cmd = ["nmap -sS -oN - %s  | grep 'tcp\|MAC' | sed 's/^ *//;s/ *$//;s/ \{1,\}/ /g' "%(ip)]
 		#print 'cmd: ',cmd
 		#out = subprocess.Popen(cmd, stdout = subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()[0]
 		out = self.runProcess(cmd)
@@ -290,6 +290,8 @@ class NetworkScan:
 				if ip == this_host.ip:
 					hw_addr = this_host.mac
 				else:
+					# I find IOS devices see pings, but then don't produce anything on 
+					# the port scan ... I think they are sleeping.
 					print "[-] Couldn't get MAC Addr for %s"%(ip)
 					continue
 			

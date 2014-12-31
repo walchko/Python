@@ -24,17 +24,17 @@ Nmap needs to be run as root, using sudo, to do it's job properly.
 
 Nmap network scan:
 
-	nmap -sn 192.168.1.0/24
+	sudo nmap -sn -PS22,80,443,3389,5000 -oG - %s 
 
 * `sn` is no port scan, this is the old `sP` arg
-* ``
+* `P` are a listing of select ports
+* `G` is grepable output
 
 Nmap host scan:
 
-	nmap -sS -F -oN - _host-IP_
+	nmap -sS -oN - _host-IP_
 
 * `sS` is ...
-* `F` is a fast scan
 * `oN` is normal output
 
 **Note:** Both `nmap` commands get pipped through grep, awk, and/or sed to clean the output up for python.
