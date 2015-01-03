@@ -9,7 +9,17 @@ Simple python script which uses [nmap](http://) and [avahi](http://www.avahi.org
 3. Notify admin of new hosts on network
 4. Store record of hosts in YAML file
 
-## Tools
+## Usage
+
+Scanner:
+
+	sudo netscan
+
+Web server (http://localhost:9000):
+
+	simple_server
+
+## UNIX Tools
 
 Install:
 
