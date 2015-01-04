@@ -5,16 +5,7 @@ import sys
 from pprint import pprint
 import wit
 from StringIO import StringIO
-
-def readYaml(self,fname):
-		f = open( fname )
-		dict = yaml.safe_load(f)
-		f.close()
-		
-		return dict
-
-self.info = self.readYaml('/Users/kevin/Dropbox/accounts.yaml')
-wit_token = self.info['WIT_TOKEN']
+import yaml
 
 
 try:
@@ -26,11 +17,18 @@ except ImportError:
 try:
     import wit
 except ImportError:
-    # Wit isn't installed, so we'll add the parent directory to the system
-    # path and try again
-    path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    sys.path.append(path)
-    import wit
+    print('Error: Make sure you install Wit before running this example.')
+    sys.exit()
+
+def readYaml(fname):
+		f = open( fname )
+		dict = yaml.safe_load(f)
+		f.close()
+		
+		return dict
+
+info = readYaml('/Users/kevin/Dropbox/accounts.yaml')
+wit_token = info['WIT_TOKEN']
 
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
