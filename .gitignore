@@ -1,6 +1,7 @@
 *.png
 *.jpg
 *.pyc
+*.html
 old
 orig
 .DS_Store
