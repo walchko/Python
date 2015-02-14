@@ -4,6 +4,7 @@ from libnmap.process import NmapProcess
 from libnmap.parser import NmapParser
 import pprint as pp
 import datetime
+from awake import wol
 
 # determine OS
 from sys import platform as _platform
@@ -153,6 +154,14 @@ class Network:
 				hosts[mac] = info
 		
 		return hosts
+		
+	"""
+	Wake-on-lan (wol)
+	in: hw addr
+	out: None
+	"""
+	def wol(self, mac):
+		wol.send_magic_packet(mac)
 
 def main():
 	n = Network()
